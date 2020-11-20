@@ -67,7 +67,7 @@ impl WebrenderSurfman {
         };
         let context_attributes = ContextAttributes { flags, version };
         let context_descriptor = device.create_context_descriptor(&context_attributes)?;
-        let mut context = device.create_context(&context_descriptor, None)?;
+        let mut context = device.create_context(&context_descriptor)?;
         let surface_access = SurfaceAccess::GPUOnly;
         let headless = match surface_type {
             SurfaceType::Widget { .. } => false,
