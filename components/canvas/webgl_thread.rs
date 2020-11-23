@@ -556,7 +556,7 @@ impl WebGLThread {
 
         let mut ctx = self
             .device
-            .create_context(&context_descriptor)
+            .create_context(&context_descriptor, None)
             .map_err(|err| format!("Failed to create the GL context: {:?}", err))?;
         let surface = self
             .device
