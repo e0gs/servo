@@ -1320,7 +1320,10 @@ fn convert_texture_component_type(
             GPUTextureComponentType::Float => wgt::TextureComponentType::Float,
             GPUTextureComponentType::Sint => wgt::TextureComponentType::Sint,
             GPUTextureComponentType::Uint => wgt::TextureComponentType::Uint,
-            GPUTextureComponentType::Depth_comparison => wgt::TextureComponentType::DepthComparison,
+            // TODO
+            // probably not the right solution
+            //GPUTextureComponentType::Depth_comparison => wgt::TextureComponentType::DepthComparison,
+            _ => wgt::TextureComponentType::Float,
         }
     } else {
         wgt::TextureComponentType::Float
